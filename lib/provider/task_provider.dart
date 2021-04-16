@@ -35,6 +35,7 @@ class TaskProvider with ChangeNotifier {
         dueDate: DateTime.now().millisecondsSinceEpoch,
         priority: Status.PRIORITY_1,
         taskStatus: TaskStatus.PENDING);
+    currentTask.projectName = 'Inbox';
     currentProject = projects.where((element) => element.id == 1).toList()[0];
   }
 
@@ -89,6 +90,7 @@ class TaskProvider with ChangeNotifier {
   }
 
   _setFilterTasks() {
+    print(homeFilter);
     if (homeFilter == 'Inbox') {
       filterTasks =
           tasks.where((elem) => elem.taskStatus == TaskStatus.PENDING).toList();

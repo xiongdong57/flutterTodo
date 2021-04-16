@@ -20,7 +20,7 @@ class ProjectPage extends StatelessWidget {
 
 List<Widget> _buildProjects(BuildContext context) {
   List<Widget> projectWidgetsList = [];
-  Provider.of<TaskProvider>(context, listen: false).projects.forEach((element) {
+  Provider.of<TaskProvider>(context).projects.forEach((element) {
     projectWidgetsList.add(ListTile(
         leading: Container(
           width: 14.0,

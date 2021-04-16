@@ -10,7 +10,7 @@ class TaskPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Task> pendingTasks =
-        Provider.of<TaskProvider>(context, listen: false).filterTasks;
+        Provider.of<TaskProvider>(context).filterTasks;
     if (pendingTasks.length > 0) {
       return _buildTaskList(pendingTasks);
     } else {
