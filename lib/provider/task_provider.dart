@@ -90,7 +90,6 @@ class TaskProvider with ChangeNotifier {
   }
 
   _setFilterTasks() {
-    print(homeFilter);
     if (homeFilter == 'Inbox') {
       filterTasks =
           tasks.where((elem) => elem.taskStatus == TaskStatus.PENDING).toList();

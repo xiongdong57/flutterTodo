@@ -22,7 +22,7 @@ class TaskPage extends StatelessWidget {
 class CompletedTasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Task> archivedTasks = Provider.of<TaskProvider>(context, listen: false)
+    List<Task> archivedTasks = Provider.of<TaskProvider>(context)
         .tasks
         .where((elem) => elem.taskStatus == TaskStatus.COMPLETE)
         .toList();
